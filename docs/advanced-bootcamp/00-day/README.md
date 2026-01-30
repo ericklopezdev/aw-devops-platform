@@ -40,8 +40,8 @@ flowchart LR
 ### 3. Cost Estimation
 
 Cost estimation is documented in:
-- `./assets/cost-estimation.csv`
-- `./assets/cost-estimation.pdf`
+- [./assets/cost-estimation.csv](assets/cost-estimation.csv)
+- [./assets/cost-estimation.pdf](assets/cost-estimation.pdf)
 
 - using: https://calculator.aws
 
