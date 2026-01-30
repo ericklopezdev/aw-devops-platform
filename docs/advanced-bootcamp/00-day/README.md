@@ -44,3 +44,5 @@ Cost estimation is documented in:
 - `./assets/cost-estimation.pdf`
 
 - using: https://calculator.aws
+
+![aws pricing calculator screenshot](assets/aws-pricing-calculator.png)
