@@ -1,0 +1,18 @@
+﻿Estimate summary
+Upfront cost,Monthly cost,Total 12 months cost,Currency
+0,74.9,898.80,USD
+,,* Includes upfront cost
+
+
+Detailed Estimate
+Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Status,Configuration summary
+My Estimate,US East (Ohio),,Amazon Aurora MySQL-Compatible,0,54.36,652.32,USD,,"Aurora MySQL Cluster Configuration Option (Aurora Standard), Change records per statement (0.38), Instance Type (db.t3.small), Nodes (1), Utilization (24 Hours/Day), Instance Family (General purpose), Pricing Model (OnDemand), Storage amount (20 GB)"
+My Estimate,US East (Ohio),,S3 Standard,0,0.47,5.64,USD,,"S3 Standard storage (20 GB per month), PUT, COPY, POST, LIST requests to S3 Standard (1000), GET, SELECT, and all other requests from S3 Standard (10000), Data returned by S3 Select (5 GB per month)"
+My Estimate,US East (Ohio),,Data Transfer,0,0.45,5.40,USD,,"DT Inbound: All other regions (5 GB per month), DT Outbound: Internet (5 GB per month)"
+My Estimate,US East (Ohio),,Amazon CloudFront,0,5.26,63.12,USD,,"Data transfer out to internet (50 GB per month), Data transfer out to origin (50 GB per month), Number of requests (HTTPS) (10000 per month)"
+My Estimate,US East (Ohio),,Amazon OpenSearch Service,0,14.360000000000001,172.32,USD,,"Number of instances (1), Storage for each Amazon OpenSearch Service instance (General Purpose SSD (gp3)), UltraWarm storage cost (0), Nodes (1), Instance type (t2.micro.search), Utilization (On-Demand only) (24 Hours/Day), Instance Node Type (General purpose), Storage Type (EBS Only), Pricing strategy (OnDemand), Number of nodes (0), Instance type (ultrawarm1.large.search), Utilization (On-Demand only) (100 %Utilized/Month), Pricing strategy (OnDemand), Nodes (0), Instance type (r5.2xlarge.search), Utilization (On-Demand only)  (100 %Utilized/Month), Instance Node Type (Memory optimized), Storage Type (EBS Only), Pricing strategy (OnDemand), Storage amount per volume (gp3) (10 GB), Provisioning IOPS per volume (gp3) (3000)"
+
+
+
+Acknowledgement
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services."
