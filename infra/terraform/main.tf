@@ -22,7 +22,7 @@ module "eks" {
   region             = var.aws_region
 
   vpc_id     = module.vpc.vpc_id
-  subnet_ids = concat(module.vpc.public_subnets, module.vpc.private_subnets)
+  subnet_ids = module.vpc.private_subnets
 
   eks_managed_node_groups = {
     deafult = {
