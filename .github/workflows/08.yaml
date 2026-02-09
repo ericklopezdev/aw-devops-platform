@@ -1,0 +1,33 @@
+name: CI Upload Artifact
+
+on:
+  push:
+    branches: [ "main" ]
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  upload-artifact:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Debug context
+        run: |
+          echo "GITHUB_REF=$GITHUB_REF"
+          echo "GITHUB_EVENT_NAME=$GITHUB_EVENT_NAME"
+
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::711387135481:role/aw-bootcamp-08-day-role
+          aws-region: us-east-1
+
+      - name: Upload artifact to S3
+        run: |
+          echo "hello from github actions day 08" > artifact.txt
+          aws s3 cp artifact.txt s3://aw-bootcamp-artifacts-e02e2ce8/artifact.txt
