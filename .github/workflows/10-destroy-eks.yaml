@@ -1,16 +1,13 @@
-name: Provision EKS Cluster
+name: Destroy EKS Cluster
 
 on:
   workflow_dispatch:
 
 jobs:
-  create_cluster:
+  destroy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
@@ -20,10 +17,13 @@ jobs:
 
       - name: Install eksctl
         run: |
-          curl -sSL https://github.com/eksctl-io/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz \
+          curl -sSL "https://github.com/eksctl-io/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" \
             | tar -xz -C /tmp
           sudo mv /tmp/eksctl /usr/local/bin/eksctl
 
-      - name: Create EKS cluster using config file
+      - name: Delete EKS cluster
         run: |
-          eksctl create cluster -f k8s/09-day/eksctl-cluster.yaml
+          eksctl delete cluster \
+            --name dev-challenge-erick \
+            --region us-east-1
+

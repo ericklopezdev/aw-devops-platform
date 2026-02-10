@@ -1,0 +1,27 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: dev-challenge-erick
+  region: us-east-1
+
+vpc:
+  id: vpc-0400907fbbb03be91
+  subnets:
+    private:
+      us-east-1a:
+        id: subnet-0567d12c25eec17db
+      us-east-1b:
+        id: subnet-0a89fc35dbdac8e17
+    public:
+      us-east-1a:
+        id: subnet-080e234b7138b78ed
+      us-east-1b:
+        id: subnet-0beab4f728a850475
+
+managedNodeGroups:
+  - name: ng-default
+    instanceType: t3.small
+    desiredCapacity: 1
+    minSize: 1
+    maxSize: 1
